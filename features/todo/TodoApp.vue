@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="todo-app">
     <h1>TODOリスト</h1>
     <TodoForm @add-todo="addTodo" />
     <TodoList :todos="todos" @toggle-todo="toggleTodo" />
@@ -24,3 +24,28 @@ const toggleTodo = (id) => {
   }
 }
 </script>
+
+<style scoped>
+.todo-app {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 600px) {
+  .todo-app {
+    padding: 10px;
+  }
+  
+  h1 {
+    font-size: 24px;
+  }
+}
+</style>
