@@ -1,13 +1,15 @@
 <template>
   <ul class="todo-list">
     <li v-for="todo in todos" :key="todo.id" class="todo-item">
-      <input
-        type="checkbox"
-        :checked="todo.completed"
-        @change="$emit('toggle-todo', todo.id)"
-        class="todo-checkbox"
-      >
-      <span :class="{ 'completed': todo.completed }">{{ todo.title }}</span>
+      <label class="todo-label">
+        <input
+          type="checkbox"
+          :checked="todo.completed"
+          @change="$emit('toggle-todo', todo.id)"
+          class="todo-checkbox"
+        >
+        <span :class="{ 'completed': todo.completed }">{{ todo.title }}</span>
+      </label>
     </li>
   </ul>
 </template>
