@@ -23,6 +23,7 @@ test.describe('TODOリスト', () => {
   test('TODOをチェックできる', async () => {
     await todoPage.addTodo('チェックするTODO');
     const checkbox = await todoPage.getLastCheckbox();
+    await expect(checkbox).not.toBeChecked();
     await checkbox.check();
     await expect(checkbox).toBeChecked();
   });
