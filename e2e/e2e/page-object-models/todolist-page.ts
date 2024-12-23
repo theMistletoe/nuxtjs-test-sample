@@ -23,10 +23,10 @@ export class TodoPage {
   }
 
   async getTodoItem(text: string) {
-    return this.page.locator(`label:has-text("${text}")`);
+    return this.page.getByRole('listitem').filter({ hasText: text });
   }
 
   async getLastCheckbox() {
-    return this.page.locator('input[type="checkbox"]').last();
+    return this.page.getByRole('checkbox').last();
   }
 }
