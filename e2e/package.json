@@ -5,7 +5,8 @@
   "scripts": {
     "e2e": "playwright test",
     "allure-generate": "allure generate allure-results -o allure-report --clean",
-    "allure-open": "allure open allure-report"
+    "allure-open": "allure open allure-report",
+    "parent": "npm run --prefix ../"
   },
   "keywords": [],
   "author": "",
