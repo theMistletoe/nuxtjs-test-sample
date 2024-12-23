@@ -1,75 +1,51 @@
-# Nuxt 3 Minimal Starter
+# TODOアプリケーション
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+シンプルで使いやすいTODOリストアプリケーションです。
 
-## Setup
+## 機能
 
-Make sure to install the dependencies:
+- TODOの追加
+- TODOの完了/未完了の切り替え 
+- レスポンシブデザイン対応
 
-```bash
-# npm
-npm install
+## 技術スタック
 
-# pnpm
-pnpm install
+- Vue.js
+- Playwright (E2Eテスト)
 
-# yarn
-yarn install
+## コンポーネント構成
 
-# bun
-bun install
-```
+### TodoForm.vue
 
-## Development Server
+- 新規TODOの入力フォーム
+- 入力されたTODOをリストに追加
+- モバイル対応のレスポンシブデザイン
 
-Start the development server on `http://localhost:3000`:
+### TodoList.vue 
 
-```bash
-# npm
-npm run dev
+- TODOアイテムの一覧表示
+- チェックボックスによるTODO完了状態の切り替え
+- 完了したTODOの打ち消し線表示
+- モバイル対応のレスポンシブデザイン
 
-# pnpm
-pnpm run dev
+## 開発環境のセットアップ
 
-# yarn
-yarn dev
+1. リポジトリをクローン
+2. `npm install`で依存関係をインストール
+3. `npm run dev`で開発サーバーを起動
+4. ブラウザで`http://localhost:5173`にアクセス
 
-# bun
-bun run dev
-```
 
-## Production
 
-Build the application for production:
+## テストの実行
 
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
+### Unitテスト
 
 ```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
+npm run test
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+### E2Eテスト
+
+e2eテストは`e2e`ディレクトリ配下に配置されています。
+テストの実行方法や環境については[E2Eテストのドキュメント](./e2e/README.md)を参照してください。
