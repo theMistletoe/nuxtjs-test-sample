@@ -33,7 +33,7 @@
 1. リポジトリをクローン
 2. `npm install`で依存関係をインストール
 3. `npm run dev`で開発サーバーを起動
-4. ブラウザで`http://localhost:5173`にアクセス
+4. ブラウザで`http://localhost:3000`にアクセス
 
 
 
